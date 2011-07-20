@@ -1,0 +1,13 @@
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+
+public class ConnectionFactory {
+	public Con getConnection(){
+		try {
+			return DriverManager.getConnection("jdbc:mysql://localhost/fj21", "root", "");
+		} catch (SQLException e) {
+			// TODO: handle exception
+		}
+	}
+}
