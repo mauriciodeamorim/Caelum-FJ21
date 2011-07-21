@@ -1,7 +1,0 @@
-import javax.servlet.http.HttpServlet;
-
-
-public class Relogio extends HttpServlet{
-	
-
-}

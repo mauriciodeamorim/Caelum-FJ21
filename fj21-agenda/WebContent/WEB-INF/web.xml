@@ -8,4 +8,16 @@
   	<servlet-name>relogio</servlet-name>
   	<url-pattern>/relogio</url-pattern>
   </servlet-mapping>
+   <servlet>
+  	<servlet-name>adicionaContato</servlet-name>
+  	<servlet-class>br.com.caelum.servlet.AdicionaContato</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>adicionaContato</servlet-name>
+  	<url-pattern>/adicionaContato</url-pattern>
+  </servlet-mapping>
+  <error-page>
+   	<exception-type>java.lang.exception</exception-type>
+  	<location>/erro.html</location>
+  </error-page>
 </web-app>

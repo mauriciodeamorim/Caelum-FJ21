@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Encapsulate field &apos;ContatoDAO.connection&apos; in &apos;ContatoDAO&apos;&#x0A;- Original project: &apos;jdbc&apos;&#x0A;- Original element: &apos;ContatoDAO.connection&apos;&#x0A;- Getter method name: &apos;getConnection&apos;&#x0A;- Setter method name: &apos;setConnection&apos;&#x0A;- Field visibility: &apos;public&apos;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;connection&apos;" flags="589830" getter="getConnection" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;{ContatoDAO.java[ContatoDAO^connection" insertion="0" setter="setConnection" stamp="1311038890664" version="1.0" visibility="1"/>
-</session>

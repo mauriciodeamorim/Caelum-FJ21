@@ -1,0 +1,1 @@
+<div style="background-color:blue;height:20px;width:100%;"></div>
