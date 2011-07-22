@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -35,7 +36,6 @@ public class AdicionaContato extends HttpServlet {
 			out.println("Erro");
 			return;
 		}
-	
 	//String dataTexto = request.getParameter("data");
 	
 	//Monta objeto
@@ -47,12 +47,14 @@ public class AdicionaContato extends HttpServlet {
 	ContatoDAO dao = new ContatoDAO();
 	dao.adiciona(c);
 	
+	RequestDispatcher rd = request.getRequestDispatcher("/contato-adicionado.jsp");
+	rd.forward(request, response);
+	
 	//imprime
-
-	out.println("<html>");
-	out.println("<body><br/>");
-	out.println("Contato <b>" + c.getNome() + "</b> adicionado com sucesso!!<br/>");
-	out.println("</body>");
-	out.println("</html>");
+	//out.println("<html>");
+	//out.println("<body><br/>");
+	//out.println("Contato <b>" + c.getNome() + "</b> adicionado com sucesso!!<br/>");
+	//out.println("</body>");
+	//out.println("</html>");
 	}
 }

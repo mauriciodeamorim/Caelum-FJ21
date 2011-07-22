@@ -8,6 +8,14 @@
   	<servlet-name>relogio</servlet-name>
   	<url-pattern>/relogio</url-pattern>
   </servlet-mapping>
+  <servlet>
+  	<servlet-name>fazTudo</servlet-name>
+  	<servlet-class>br.com.caelum.servlet.FazTudo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>fazTudo</servlet-name>
+  	<url-pattern>/sistema</url-pattern>
+  </servlet-mapping>
    <servlet>
   	<servlet-name>adicionaContato</servlet-name>
   	<servlet-class>br.com.caelum.servlet.AdicionaContato</servlet-class>
