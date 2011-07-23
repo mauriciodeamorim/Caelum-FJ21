@@ -9,12 +9,12 @@
   	<url-pattern>/relogio</url-pattern>
   </servlet-mapping>
   <servlet>
-  	<servlet-name>fazTudo</servlet-name>
-  	<servlet-class>br.com.caelum.servlet.FazTudo</servlet-class>
+  	<servlet-name>controlador</servlet-name>
+  	<servlet-class>br.com.caelum.mvc.servlet.ControllerServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>fazTudo</servlet-name>
-  	<url-pattern>/sistema</url-pattern>
+  	<servlet-name>controlador</servlet-name>
+  	<url-pattern>/mvc</url-pattern>
   </servlet-mapping>
    <servlet>
   	<servlet-name>adicionaContato</servlet-name>
