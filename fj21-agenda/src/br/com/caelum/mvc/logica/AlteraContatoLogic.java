@@ -32,7 +32,6 @@ public class AlteraContatoLogic implements Logica {
 		ContatoDAO dao = new ContatoDAO();
 		dao.atualiza(contato);
 
-
 		RequestDispatcher rd = req.getRequestDispatcher("/lista-contatos-scriptlet.jsp");
 		rd.forward(req, res);
 		System.out.println("Alterando contato...." + contato.getNome());
