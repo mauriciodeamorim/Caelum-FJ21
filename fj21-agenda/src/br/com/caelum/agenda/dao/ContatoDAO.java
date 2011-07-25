@@ -22,7 +22,8 @@ public class ContatoDAO {
 			throw new RuntimeException(e);
 		}
 	}
-
+	
+	//Quando esperamos um objeto conexao no DAO, esperamos que esta dependencia seja injetada
 	public ContatoDAO(Connection connection) {
 		this.connection = connection;
 	}

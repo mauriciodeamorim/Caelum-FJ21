@@ -9,8 +9,16 @@ import br.com.caelum.jdbc.ConnectionFactory;
 public class ContatoDAO {
 	private Connection connection;
 	
+	/*Forma de conexa incial, pegando uma conexa atraves de 
+	 * Factory no construtor
 	public ContatoDAO(){
 		this.connection = new ConnectionFactory().getConnection();
+		}
+	*/
+	
+	//Iniciando a inversao de controle/injecao de dependencia
+	public ContatoDAO(Connection connection){
+		this.connection = connection;
 		}
 	
 	public void Adiciona(Contato contato){
