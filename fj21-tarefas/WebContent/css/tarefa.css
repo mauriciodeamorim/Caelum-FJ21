@@ -1,0 +1,6 @@
+@CHARSET "UTF-8";
+
+.errorMessage  { color: red; text-decoration: none; outline: none; }
+
+.descricao {background-color: red; width:722px;}
+/*id #descricao {background-color: red; width:722px;} */

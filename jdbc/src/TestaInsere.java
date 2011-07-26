@@ -10,7 +10,7 @@ public class TestaInsere {
 		contato.setEmail("Email");
 		contato.setDataNascimento(Calendar.getInstance());
 		
-		ContatoDAO dao = new ContatoDAO();
+		ContatoDAO dao = new ContatoDAO(null);
 		
 		dao.Adiciona(contato);
 		System.out.println("Gravado!!");

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: hudson
+Build-Jdk: 1.5.0_06
+Hudson-Build-Number: 9
+Hudson-Project: jstl-api-impl
+Hudson-Version: 1.263-SNAPSHOT (private-11/17/2008 11:41-kohsuke)
+

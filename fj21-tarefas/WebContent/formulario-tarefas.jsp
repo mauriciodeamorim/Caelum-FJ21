@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link type="text/css" href="css/tarefa.css" rel="stylesheet"/>
 <title>Insert title here</title>
 </head>
 <body>
@@ -12,8 +13,9 @@
 	<s:fielderror fieldName="tarefa.descricao"></s:fielderror>
 	<form action="adicionaTarefas" method="post">
 		Descricao: <br>
-		<textarea name="tarefa.descricao" rows="5" cols="100"></textarea><br>
-		
+		<div class="descricao">
+			<textarea name="tarefa.descricao" rows="5" cols="100"></textarea><br>
+		</div>
 		<input type="submit" value="Adicionar">
 	</form>
 </body>

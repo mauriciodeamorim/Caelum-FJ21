@@ -8,11 +8,15 @@ import br.com.caelum.tarefas.modelo.Tarefa;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.validator.annotations.RequiredStringValidator;
+import com.opensymphony.xwork2.validator.annotations.StringLengthFieldValidator;
 import com.opensymphony.xwork2.validator.annotations.Validations;
 
 @SuppressWarnings("serial")
 @Validations(requiredStrings={
 		@RequiredStringValidator(fieldName="tarefa.descricao", message="Valor obrigatorio")
+}, stringLengthFields={
+		@StringLengthFieldValidator(fieldName="tarefa.descricao",
+				minLength="5", message="Minimo de 5 caracteres")
 })
 public class AdicionaTarefasAction extends ActionSupport {
 
