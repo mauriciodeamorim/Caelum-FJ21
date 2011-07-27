@@ -24,7 +24,8 @@ public class AdicionaTarefasAction extends ActionSupport {
 
 	@Action(value="adicionaTarefas", results = {
 			@Result(name="ok", location="tarefa-adicionada.jsp"),
-			@Result(name="input", location="/formulario-tarefas.jsp")
+			@Result(name="input", type="redirectAction",
+					params={"actionName", "formularioTarefa"})
 	})
 
 	public String execute(){

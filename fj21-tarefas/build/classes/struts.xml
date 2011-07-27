@@ -2,5 +2,10 @@
 "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
+	<package name="default" extends="struts-default">
+		<action name="formularioTarefa">
+			<result>/WEB-INF/content/formulario-tarefas.jsp</result>
+		</action>
+	</package>
 	
 </struts>

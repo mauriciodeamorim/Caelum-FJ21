@@ -41,7 +41,7 @@
 	</table>
 	<br><br>
 	<div id="menu-tarefas">
-		<a href="formulario-tarefas.jsp">Criar nova tarefa</a>
+		<a href="formularioTarefa">Criar nova tarefa</a>
 	</div>
 </body>
 </html>
