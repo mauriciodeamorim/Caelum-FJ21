@@ -7,22 +7,24 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link type="text/css" href="css/tarefa.css" rel="stylesheet"/>
 <title>Lista tarefas</title>
 </head>
 <body>
-	<a href="formulario-tarefas.jsp">Criar nova tarefa</a>
-	
+	<h1>Gerenciador de tarefas</h1>
 	<br><br>
-	<table>
+	<table id="lista-tarefas">
 	<tr>
 		<th>Id</th>
 		<th>Descricao</th>
 		<th>Finalizacao</th>
 		<th>Data de finalizacao</th>
+		<th>Acoes</th>
 	</tr>
 	<c:forEach items="${tarefas}" var="tarefa">
 		<tr>
 			<td>${tarefa.id}</td>
+			<td>${tarefa.descricao}</td>
 			<c:if test="${tarefa.finalizado eq false}">
 				<td>Nao finalizado</td>	
 			</c:if>
@@ -30,10 +32,16 @@
 				<td>Finalizado</td>	
 			</c:if>
 			<td>
-				<fmt:formatDate value="${tarefa.dataFinalizacao.time}" pattern="dd/MM/yyyy"/>
+				<fmt:formatDate value="${tarefa.dataFinalizado.time}" pattern="dd/MM/yyyy"/>
 			</td>
+			<td><a href="removeTarefa?tarefa.id=${tarefa.id}">Remover</a></td>
+			<td><a href="mostraTarefa?tarefa.id=${tarefa.id}">Alterar</a></td>
 		</tr>
 	</c:forEach>
 	</table>
+	<br><br>
+	<div id="menu-tarefas">
+		<a href="formulario-tarefas.jsp">Criar nova tarefa</a>
+	</div>
 </body>
 </html>

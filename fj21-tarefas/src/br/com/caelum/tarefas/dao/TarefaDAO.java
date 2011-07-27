@@ -49,13 +49,13 @@ public class TarefaDAO {
 	}
 
 	public void altera(Tarefa tarefa) {
-		String sql = "update tarefas set descricao = ?, finalizado = ?, dataFinalizacao = ? where id = ?";
+		String sql = "update tarefas set descricao = ?, finalizado = ?, dataFinalizado = ? where id = ?";
 		PreparedStatement stmt;
 		try {
 			stmt = connection.prepareStatement(sql);
 			stmt.setString(1, tarefa.getDescricao());
 			stmt.setBoolean(2, tarefa.isFinalizado());
-			stmt.setDate(3, tarefa.getDataFinalizacao() != null ? new Date(tarefa.getDataFinalizacao().getTimeInMillis()) : null);
+			stmt.setDate(3, tarefa.getDataFinalizado() != null ? new Date(tarefa.getDataFinalizado().getTimeInMillis()) : null);
 			stmt.setLong(4, tarefa.getId());
 			stmt.execute();
 		} catch (SQLException e) {
@@ -105,7 +105,7 @@ public class TarefaDAO {
 	}
 	
 	public void finaliza(Long id) {
-		String sql = "update tarefas set finalizado = ?, dataFinalizacao = ? where id = ?";
+		String sql = "update tarefas set finalizado = ?, dataFinalizado = ? where id = ?";
 		PreparedStatement stmt;
 		try {
 			stmt = connection.prepareStatement(sql);
@@ -127,11 +127,11 @@ public class TarefaDAO {
 		tarefa.setFinalizado(rs.getBoolean("finalizado"));
 		
 		//popula a data de finalizacao da tarefa, fazendo a conversao
-		Date data = rs.getDate("dataFinalizacao");
+		Date data = rs.getDate("dataFinalizado");
 		if(data != null) {
-			Calendar dataFinalizacao = Calendar.getInstance();
-			dataFinalizacao.setTime(data);
-			tarefa.setDataFinalizacao(dataFinalizacao);
+			Calendar dataFinalizado = Calendar.getInstance();
+			dataFinalizado.setTime(data);
+			tarefa.setDataFinalizado(dataFinalizado);
 		}
 		return tarefa;
 	}
